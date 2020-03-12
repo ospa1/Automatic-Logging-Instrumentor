@@ -1,5 +1,4 @@
-# Oscar Palomino
-### automatic logging instrumentor
+### Automatic Logging Instrumentor
 
 ## Design
 this design adds logging instrumentation to java files. first, the program uses configuration files to load the paths to the project and the file that one would want to add logging to. then the file is read and a copy is made with the prefic old_ added to the name of the file. the code is then parsed into an AST tree. afterwards, when the compilation unit invokes the accept method, a new ast visitor is created with some of its visit functions overriden and implemented. when the trees ins going through the visitor methods the logging instrumentation code is added. after all the nodes in the tree are visited the same file is overwritten. TemplateClass was created to be used by the program to inject invocations static methods into the java file to log the activity of the program. 
