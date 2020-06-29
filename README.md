@@ -17,10 +17,9 @@ this project used scala 2.13.0 with sbt and for the java portion it uses java 11
   
     -it doesnt do the running multiple instances of the application portion
     -if a function has a return statement the logging is injected afterwards causing it to be unreachable
-    -for variables logging is added if the variable is instantiated within a function.
+    -have to specify which file you want to add logging to (one at a time)
     -I think the block of code that adds the logging to the file could have been put into a seperate generic function that could have dealt with all the node types
     therfefore covering all the visit functions (and most of the java language) in the ASTVisitor class instead of implementing one at a time
-    -have to specify which file you want to add logging to (one at a time)
 
 
 ## Results
